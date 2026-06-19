@@ -1,0 +1,11 @@
+# Config del dataset (formato Ultralytics YOLO)
+# Ajustad 'names' a las marcas que elijais finalmente.
+path: ../datasets/brands
+train: train/images
+val: valid/images
+test: test/images
+
+names:
+  0: nike
+  1: coca-cola
+  2: adidas

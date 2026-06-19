@@ -1,0 +1,25 @@
+
+# === P11E4 scaffold ===
+# Python / uv
+__pycache__/
+*.py[cod]
+.venv/
+.env
+# OJO: uv.lock, pyproject.toml y .python-version SI se versionan (reproducibilidad).
+
+# Datos pesados y artefactos
+data/
+models/*.pt
+outputs/
+runs/                 # salidas de Ultralytics (train/predict)
+*.db
+*.sqlite3
+
+# Dataset: imagenes/labels fuera de git; se versiona solo data.yaml
+datasets/**/images/
+datasets/**/labels/
+
+# Sistema / IDE
+.DS_Store
+.idea/
+.vscode/

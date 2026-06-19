@@ -1,0 +1,15 @@
+[project]
+name = "p11e4"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "opencv-python>=4.13.0.92",
+    "pandas>=3.0.3",
+    "streamlit>=1.58.0",
+    "ultralytics>=8.4.71",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+]
