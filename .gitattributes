@@ -1,0 +1,22 @@
+# Texto: normaliza finales de linea a LF dentro del repo
+* text=auto eol=lf
+
+# Forzar LF en lo critico (un .sh con CRLF se rompe al ejecutarse)
+*.sh   text eol=lf
+*.py   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+
+# Binarios: que Git no intente normalizarlos
+*.pt      binary
+*.pth     binary
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.mp4     binary
+*.avi     binary
+*.mov     binary
+*.db      binary
+*.sqlite3 binary
