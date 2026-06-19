@@ -23,3 +23,8 @@ datasets/**/labels/
 .DS_Store
 .idea/
 .vscode/
+
+# Extras
+issues.json
+issues_md/
+.obsidian/
