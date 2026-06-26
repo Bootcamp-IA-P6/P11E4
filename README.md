@@ -26,6 +26,8 @@ El resultado: subir un vídeo, pulsar analizar, y obtener datos concretos sobre 
 
 > Las 3 marcas detectadas simultáneamente con bounding box y % de confianza.
 
+[▶ Ver demo en vivo](docs/assets/04_demo_BrandVision.mp4)
+
 ---
 
 ## Arquitectura
@@ -80,31 +82,7 @@ P11E4/
 
 Pipeline modular de 4 etapas orquestado por `run.py`. Entre etapas viaja una estructura `Detection(frame, timestamp, clase, confianza, bbox)`.
 
-```
-Vídeo .mp4
-    │
-    ▼
-[1] INFERENCIA YOLOv8 frame a frame     video_pipeline.py
-    Dibuja bbox + clase + % confianza
-    Genera vídeo anotado en outputs/
-    │
-    ▼
-[2] TRACKER intervalos temporales       tracker.py
-    Agrupa detecciones consecutivas
-    en AppearanceInterval por marca
-    │
-    ▼
-[3] INFORME tiempos y %                 report.py
-    Calcula tiempo total y % por marca
-    Genera JSON y TXT en outputs/
-    │
-    ▼
-[4] BASE DE DATOS SQLite                db.py
-    Persiste videos, intervalos e informes
-    │
-    ▼
-FRONTEND Streamlit                      streamlit_app.py
-```
+![Arquitectura del sistema BrandVision](docs/assets/01_arquitectura.png)
 
 ---
 
@@ -141,6 +119,8 @@ Validación sobre **165 imágenes** (191 logos), umbral de confianza 0.40:
 | Adidas | 0.94 | 0.77 | 0.95 |
 | Puma | 0.91 | 0.88 | 0.92 |
 | Nike | 0.87 | 0.93 | 0.87 |
+
+![Resumen de métricas del modelo](docs/assets/08_metricas_resumen.png)
 
 ---
 
