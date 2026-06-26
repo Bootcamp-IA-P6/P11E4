@@ -30,5 +30,5 @@ Generado: 2026-06-19T11:38:42Z (UTC) · fuente: issues.json
 
 ## Demo / App desplegada
 
-- _(pendiente — nivel experto)_
+- https://magical-giving-starved.ngrok-free.dev/
 
