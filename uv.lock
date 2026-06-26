@@ -1873,6 +1873,7 @@ dependencies = [
     { name = "opencv-python" },
     { name = "opencv-python-headless" },
     { name = "pandas" },
+    { name = "pillow" },
     { name = "streamlit" },
     { name = "ultralytics" },
 ]
@@ -1887,6 +1888,7 @@ requires-dist = [
     { name = "opencv-python", specifier = ">=4.13.0.92" },
     { name = "opencv-python-headless", specifier = ">=4.13.0.92" },
     { name = "pandas", specifier = ">=3.0.3" },
+    { name = "pillow", specifier = ">=12.2.0" },
     { name = "streamlit", specifier = ">=1.58.0" },
     { name = "ultralytics", specifier = ">=8.4.71" },
 ]
