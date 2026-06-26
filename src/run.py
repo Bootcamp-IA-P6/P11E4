@@ -76,6 +76,13 @@ def main(
         video_name         = video_path.stem,
     )
 
+    # ── 4. Guardar en BD ─────────────────────────────────────────────────────────
+    print("\n[4/4] Guardando en base de datos...")
+    from src.database.db import init_db, guardar_analisis
+    init_db()
+    video_id = guardar_analisis(video_path.stem, duration_sec, intervals, report)
+    print(f"  Guardado con video_id={video_id}")
+
     # ── Resumen final ─────────────────────────────────────────────────────────
     elapsed = time.time() - t_start
     print(f"\n{'='*50}")
