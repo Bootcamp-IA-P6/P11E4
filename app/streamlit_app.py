@@ -14,6 +14,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+import subprocess
+import shutil
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -328,7 +330,37 @@ def render_resultados(video_id: int) -> None:
     annotated = OUTPUTS_DIR / f"{video['nombre']}_annotated.mp4"
     if annotated.exists():
         st.markdown("## Vídeo anotado")
-        st.video(str(annotated))
+        fixed = OUTPUTS_DIR / f"{video['nombre']}_annotated_h264.mp4"
+        if not fixed.exists():
+            ffmpeg_path = (
+                shutil.which("ffmpeg") or
+                r"C:\Users\bruno\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1.1-full_build\bin\ffmpeg.exe"
+            )
+            subprocess.run([
+                ffmpeg_path,
+                "-y", "-i", str(annotated),
+                "-vcodec", "libx264", "-acodec", "aac",
+                str(fixed)
+            ], capture_output=True)
+
+        if fixed.exists():
+            st.markdown("""
+            <style>
+                video {
+                    max-height: 400px;
+                    border-radius: 10px;
+                }
+            </style>
+            """, unsafe_allow_html=True)
+            st.video(str(fixed))
+        else:
+            with open(annotated, "rb") as f:
+                st.download_button(
+                    label="Descargar vídeo anotado",
+                    data=f,
+                    file_name=annotated.name,
+                    mime="video/mp4",
+                )
 
 
 # ── Sección de análisis nuevo ─────────────────────────────────────────────────
