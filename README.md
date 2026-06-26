@@ -312,7 +312,7 @@ erDiagram
 | Camila Arenas | Dataset & Entrenamiento & Presentación | [@mcarenashd](https://github.com/mcarenashd) |
 | Iris Fernanda Amorim | Pipeline de vídeo & Reporting & Documentación | [@IrisFernandaAmorim](https://github.com/IrisFernandaAmorim) |
 | Raúl Machaca | Base de datos & Tests & Integración backend-frontend | [@RaulCtm](https://github.com/RaulCtm) |
-| Jose-Julio Ramírez y Sánchez-Escobar | Frontend Streamlit | [@Jose-JulioRamirezySanchez-Escobar](https://github.com/Jose-JulioRamirezySanchez-Escobar) |
+| Jose-Julio Ramírez y Sánchez-Escobar | Frontend Streamlit & Setup inicial & Documentación | [@Jose-JulioRamirezySanchez-Escobar](https://github.com/Jose-JulioRamirezySanchez-Escobar) |
 
 ---
 
