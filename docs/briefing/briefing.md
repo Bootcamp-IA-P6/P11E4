@@ -38,7 +38,7 @@ Adidas, Nike y Puma — logos con suficiente representación visual y disponibil
 
 **Raúl Machaca** — Esquema de base de datos SQLite, capa de acceso a datos, conexión con el pipeline, tests end-to-end, conversión de vídeo anotado con ffmpeg para reproducción en el navegador, integración backend-frontend & despliegue.
 
-**Jose-Julio Ramírez y Sánchez-Escobar** — Frontend Streamlit, subida de vídeo, visualización de resultados.
+**Jose-Julio Ramírez y Sánchez-Escobar** — Setup inicial, repositorio GitHub, Frontend Streamlit, subida de vídeo, visualización de resultados, documentación.
 
 ## Resultado del entrenamiento
 
