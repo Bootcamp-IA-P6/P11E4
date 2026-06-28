@@ -106,6 +106,12 @@ st.markdown("""
         border-radius: 12px;
         padding: 8px;
     }
+
+    /* Base un punto más grande y captions legibles */
+    html, body, [class*="css"] { font-size: 1.05rem; }
+    [data-testid="stMetricLabel"] { font-size: 1.05rem !important; }
+    [data-testid="stCaptionContainer"], .stCaption { font-size: 0.95rem !important; opacity: 0.9; }
+    h2 { font-size: 1.35rem !important; }
 </style>
 """, unsafe_allow_html=True)
 
